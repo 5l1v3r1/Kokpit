@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kokpit</string>
+    <string name="action_settings">Settings</string>
+    <string name="land">LAND</string>
+    <string name="takeOff">TAKE OFF</string>
+    <string name="connect">CONNECT</string>
+    <string name="flip">FLIP</string>
+    <string name="emergency">EMERGENCY</string>
+	<string name="ready">Drone is ready</string>
+	<string name="connectionFailed">Wifi Connection Could not Established</string>
+	<string name="connected">Connected</string>
+	<string name="connectionLost">Connection Lost</string>
+	<string name="connectionError">Error With Connection</string>
+	<string name="batteryLow">Battery Low</string>
+	<string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="option1">Option 1</string>
+    <string name="option2">Option 2</string>
+    <string name="max_speed">Maximum Speed</string>
+    <string name="max_altitude">Maximum Altitude</string>
+    <string name="descBtnCockpit">Cockpit Button</string>
+    <string name="descBgLauncher">Background for Launcher Button</string>
+    <string name="descBtnLauncher">Launcher Button</string>
+    <string name="descImageBattery">Battery Image</string>
+</resources>

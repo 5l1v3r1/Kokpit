@@ -1,0 +1,19 @@
+<resources>
+
+    <string name="batteryLow">Pil Zayıf</string>
+    <string name="close">Kapat</string>
+    <string name="connect">Bağlan</string>
+    <string name="connected">Bağanıldı</string>
+    <string name="connectionError">Bağlantıda Hata Oluştu</string>
+    <string name="connectionFailed">Wifi Bağlantısı Sağlanamadı</string>
+    <string name="connectionLost">Bağlantı Koptu</string>
+    <string name="emergency">Acil Stop</string>
+    <string name="flip">Takla</string>
+    <string name="land">İniş</string>
+    <string name="max_altitude">Maksimum Yükseklik</string>
+    <string name="max_speed">Maksimum Hız</string>
+    <string name="open">Aç</string>
+    <string name="ready">Dron Kullanıma Hazır</string>
+    <string name="takeOff">Kalkış</string>
+
+</resources>

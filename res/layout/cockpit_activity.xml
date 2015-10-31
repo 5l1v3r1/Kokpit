@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" >
+
+    <io.vov.vitamio.widget.CenterLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <SurfaceView
+            android:id="@+id/surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" >
+        </SurfaceView>
+    </io.vov.vitamio.widget.CenterLayout>
+    
+    <Button
+		android:id="@+id/button_open"
+		android:layout_width="100dp"
+		android:layout_height="wrap_content"
+		android:text="@string/open"
+		android:layout_centerInParent="true"
+		android:visibility="gone" />
+    
+    <ImageView
+        android:id="@+id/bgLauncher"
+        android:contentDescription="@string/descBgLauncher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.7"
+        android:src="@drawable/launcher_bg" />
+
+    <ImageButton
+        android:id="@+id/btnLauncher"
+        android:contentDescription="@string/descBtnLauncher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="13dp"
+        android:alpha="0.7"
+        android:background="@android:color/transparent"
+        android:src="@drawable/take_off" />
+
+    <TextView
+        android:id="@+id/txtst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="" />
+    
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtst"
+        android:layout_marginLeft="35dp"
+        android:alpha="0.7"
+        android:background="@drawable/joystick" >
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightLayout"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txtst"
+        android:layout_marginRight="35dp"
+        android:alpha="0.7"
+        android:background="@drawable/joystick" >
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnEmergency"
+        android:layout_alignBottom="@+id/btnEmergency"
+        android:layout_toRightOf="@+id/imgBattery"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/leftLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="102dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnEmergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgBattery"
+        android:layout_centerHorizontal="true"
+        android:text="@string/emergency" />
+
+    <ImageView
+        android:id="@+id/imgBattery"
+        android:contentDescription="@string/descImageBattery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtStatus"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/battery_5" 
+        android:alpha="0.7"/>
+
+    <TextView
+        android:id="@+id/txtAltitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtVelocity"
+        android:layout_below="@+id/txtVelocity"
+        android:layout_marginTop="30dp"
+        android:text="Altitude: 0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtVelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtStatus"
+        android:layout_below="@+id/txtStatus"
+        android:layout_marginTop="17dp"
+        android:text="Velocity: 0"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnEmergency"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/sliding_drawer_handle_bottom" />
+    
+     <com.yundroid.kokpit.ui.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/com.yundroid.yundrone"
+        android:id="@+id/drawer"
+        my:direction="topToBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        my:handle="@+id/handle"
+        my:content="@+id/content">
+        <include
+            android:id="@id/content"
+            layout="@layout/sliding_menu"/>
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="40px"
+            android:src="@drawable/sliding_drawer_handle_bottom"
+        android:layout_alignLeft="@+id/bgLauncher"
+        android:layout_alignParentTop="true" />
+    </com.yundroid.kokpit.ui.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>
